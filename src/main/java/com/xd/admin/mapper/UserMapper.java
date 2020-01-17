@@ -2,6 +2,7 @@ package com.xd.admin.mapper;
 
 import com.xd.common.domain.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * Created by 张立军 on 2020/1/15.
@@ -10,5 +11,5 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface UserMapper {
-    User selectUserById();
+    User selectUserById(@Param("userid")String userid);
 }

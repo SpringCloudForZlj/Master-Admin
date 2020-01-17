@@ -1,6 +1,7 @@
 package com.xd.admin.service;
 
 import com.xd.common.domain.User;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 
 /**
@@ -10,5 +11,5 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public interface UserService {
-    User selectUserById();
+    User selectUserById(@Param("userid")String userid);
 }
